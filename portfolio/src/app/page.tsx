@@ -1,9 +1,12 @@
 "use client";
 
+import { Loader } from "@/components/ui/Loader";
+
 import { Mail, Linkedin, Github, Code2, Phone, ArrowRight, Download, Award, ExternalLink } from "lucide-react";
 import { motion } from "framer-motion";
 
 import { ProfileCodeBox } from "@/components/ProfileCodeBox";
+ import { LeetCodeHeatmap } from "@/components/LeetCodeHeatmap";
 import { InfiniteGridBackground } from "@/components/ui/infinite-grid";
 import { FloatingIconsHero } from "@/components/ui/floating-icons-hero-section";
 import { ProjectCarousel } from "@/components/ui/project-carousel";
@@ -12,6 +15,8 @@ import { PROJECTS } from "@/data/projects";
 import { GithubHeatmap } from "@/components/GithubHeatmap";
 
 import { TypeWriter } from "@/components/ui/type-writer";
+ import { ContactForm } from "@/components/ContactForm";
+ import { ResumeButton } from "@/components/ui/ResumeButton";
 
 const Reveal = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => (
   <motion.div
@@ -30,7 +35,8 @@ export default function Home() {
 
   return (
     <main id="home" className="relative w-full bg-[#050505] text-[#ededed] overflow-x-hidden text-sm md:text-base font-sans">
-      
+      <Loader />
+      <ResumeButton />
       <Navbar />
 
       <InfiniteGridBackground>
@@ -204,10 +210,21 @@ export default function Home() {
                    <span className="font-black text-[140px] md:text-[200px] text-blue-500/[0.15] select-none pointer-events-none leading-none translate-y-4">03</span>
                  </Reveal>
                </div>
-               
-               <Reveal delay={0.2}>
-                 <GithubHeatmap username="HarshKumarhk07" />
-               </Reveal>
+                              <div className="flex flex-col gap-12 w-full">
+                  <Reveal delay={0.2}>
+                    <div className="bg-[#0d1117] border border-white/5 rounded-[2rem] p-8 md:p-12 relative overflow-hidden group">
+                      <div className="flex items-center gap-3 mb-10">
+                        <Github size={20} className="text-blue-400" />
+                        <span className="text-white/40 text-[10px] uppercase tracking-[0.3em] font-bold">GitHub Contributions</span>
+                      </div>
+                      <GithubHeatmap username="HarshKumarhk07" />
+                    </div>
+                  </Reveal>
+                  
+                  <Reveal delay={0.4} className="w-full">
+                    <LeetCodeHeatmap username="harsh_kr07" />
+                  </Reveal>
+                </div>
             </div>
           </section>
 
@@ -387,20 +404,22 @@ export default function Home() {
              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0 opacity-10 pointer-events-none select-none">
                <span className="font-black text-[200px] md:text-[300px] text-blue-500/[0.15]">09</span>
              </div>
-             <div className="flex flex-col items-center justify-center w-full px-6 z-10 mt-16 pb-32">
-               <Reveal>
-                 <span className="text-blue-400 tracking-[0.4em] text-[10px] md:text-xs uppercase font-bold mb-8 block text-center">READY TO BUILD</span>
-               </Reveal>
-               <h2 className="text-white font-black text-6xl md:text-8xl lg:text-9xl tracking-tighter leading-[0.9] text-center whitespace-pre-line drop-shadow-2xl flex flex-wrap justify-center max-w-5xl overflow-hidden mt-4">
-                 Let&apos;s Build Something Real.
-               </h2>
-               <Reveal delay={0.2} className="mt-16 flex flex-col sm:flex-row gap-6 justify-center items-center w-full max-w-md mx-auto">
-                 <a href="mailto:harshkumarhk525@gmail.com" className="w-full sm:w-auto bg-white text-black font-semibold text-sm tracking-widest uppercase px-10 py-5 rounded-full hover:bg-blue-50 transition-all flex items-center justify-center gap-3">
-                   Get in Touch <ArrowRight size={18} />
-                 </a>
-                 <a href="/cv.pdf" download className="w-full sm:w-auto border border-white/20 text-white/70 text-sm tracking-widest uppercase px-10 py-5 rounded-full hover:border-white/40 hover:text-white transition-all duration-300 flex items-center justify-center gap-3 group">
-                   <Download size={18} className="text-white/40 group-hover:text-white transition-all" /> Download CV
-                 </a>
+             <div className="max-w-7xl mx-auto px-6 relative z-10 mt-20 mb-32 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+               <div className="flex flex-col">
+                 <Reveal>
+                   <span className="text-blue-400 tracking-[0.4em] text-[10px] md:text-xs uppercase font-bold mb-8 block">READY TO BUILD</span>
+                   <h2 className="text-white font-black text-6xl md:text-8xl tracking-tighter leading-[0.9] mb-12">
+                     Let&apos;s Build Something Real.
+                   </h2>
+                 </Reveal>
+                 <div className="flex flex-col sm:flex-row gap-6 mt-4">
+                   <a href="/cv.pdf" download className="w-full sm:w-auto border border-white/20 text-white/70 text-sm tracking-widest uppercase px-10 py-5 rounded-full hover:border-white/40 hover:text-white transition-all duration-300 flex items-center justify-center gap-3 group">
+                     <Download size={18} className="text-white/40 group-hover:text-white transition-all" /> Download CV
+                   </a>
+                 </div>
+               </div>
+               <Reveal delay={0.3}>
+                 <ContactForm />
                </Reveal>
              </div>
              <div className="absolute bottom-10 w-full text-center text-white/15 hover:text-white/30 transition-all duration-1000 text-[9px] md:text-[10px] uppercase font-medium z-10 px-6 cursor-default tracking-[0.4em]">
