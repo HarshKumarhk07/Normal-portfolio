@@ -9,7 +9,7 @@ export const ProfileCodeBox = () => {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className="relative w-full max-w-[500px] aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0d1117]/80 backdrop-blur-xl group hover:border-blue-500/30 transition-all duration-500"
+      className="relative w-full max-w-[700px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-[#0d1117]/80 backdrop-blur-xl group hover:border-blue-500/30 transition-all duration-500"
     >
       {/* Window Header */}
       <div className="flex items-center justify-between px-4 py-3 bg-[#161b22]/50 border-b border-white/5">
@@ -25,7 +25,7 @@ export const ProfileCodeBox = () => {
       </div>
 
       {/* Code Content */}
-      <div className="p-6 md:p-8 font-mono text-[13px] md:text-sm leading-relaxed overflow-hidden">
+      <div className="p-8 md:p-10 font-mono text-sm md:text-base leading-relaxed overflow-hidden">
         <div className="flex gap-4">
           <span className="text-white/20 select-none hidden sm:block">1</span>
           <p>
@@ -41,7 +41,7 @@ export const ProfileCodeBox = () => {
           <p className="pl-4">
             <span className="text-[#f1fa8c]">name</span>
             <span className="text-white">:</span>{" "}
-            <span className="text-[#50fa7b]">&apos;Devkaran Singh Tanwar&apos;</span>
+            <span className="text-[#50fa7b]">&apos;Harsh Kumar Singh&apos;</span>
             <span className="text-white">,</span>
           </p>
         </div>
@@ -80,7 +80,7 @@ export const ProfileCodeBox = () => {
           <p className="pl-8">
             <span className="text-[#f1fa8c]">problemsSolved</span>
             <span className="text-white">:</span>{" "}
-            <span className="text-[#bd93f9]">200+</span>
+            <span className="text-[#bd93f9]">130+</span>
             <span className="text-white">,</span>
           </p>
         </div>
@@ -90,7 +90,7 @@ export const ProfileCodeBox = () => {
           <p className="pl-8">
             <span className="text-[#f1fa8c]">cgpa</span>
             <span className="text-white">:</span>{" "}
-            <span className="text-[#bd93f9]">7.76</span>
+            <span className="text-[#bd93f9]">7.8</span>
             <span className="text-white">,</span>
           </p>
         </div>

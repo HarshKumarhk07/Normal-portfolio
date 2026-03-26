@@ -34,7 +34,7 @@ export const InfiniteGridBackground = ({ children }: { children: React.ReactNode
     >
       {/* Background Grid Layer (GPU Accelerated CSS) */}
       <div 
-        className="absolute inset-0 pointer-events-none z-0 opacity-[0.08]"
+        className="absolute inset-0 pointer-events-none z-0 opacity-15"
         style={{
           backgroundImage: `linear-gradient(rgba(59,130,246,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.5) 1px, transparent 1px)`,
           backgroundSize: "50px 50px",
@@ -46,7 +46,7 @@ export const InfiniteGridBackground = ({ children }: { children: React.ReactNode
 
       {/* Foreground Grid Layer (Mouse Reveal Flashlight) */}
       <div 
-        className="absolute inset-0 pointer-events-none z-[1] opacity-40"
+        className="absolute inset-0 pointer-events-none z-[1] opacity-60"
         style={{
           backgroundImage: `linear-gradient(rgba(59,130,246,0.6) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.6) 1px, transparent 1px)`,
           backgroundSize: "50px 50px",
