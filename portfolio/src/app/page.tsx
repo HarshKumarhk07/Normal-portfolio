@@ -1,9 +1,6 @@
-"use client";
-
 import { Loader } from "@/components/ui/Loader";
 
 import { Mail, Linkedin, Github, Code2, Phone, ArrowRight, Download, Award, ExternalLink } from "lucide-react";
-import { motion } from "framer-motion";
 
 import { ProfileCodeBox } from "@/components/ProfileCodeBox";
  import { LeetCodeHeatmap } from "@/components/LeetCodeHeatmap";
@@ -17,18 +14,8 @@ import { GithubHeatmap } from "@/components/GithubHeatmap";
 import { TypeWriter } from "@/components/ui/type-writer";
  import { ContactForm } from "@/components/ContactForm";
  import { ResumeButton } from "@/components/ui/ResumeButton";
-
-const Reveal = ({ children, delay = 0, className = "" }: { children: React.ReactNode, delay?: number, className?: string }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-100px" }}
-    transition={{ duration: 0.7, ease: "easeOut", delay }}
-    className={className}
-  >
-    {children}
-  </motion.div>
-);
+import { Reveal } from "@/components/ui/Reveal";
+import { HeroScrollLine } from "@/components/ui/HeroScrollLine";
 
 export default function Home() {
   const roles = ["Full Stack Developer", "MERN Stack Developer", "Problem Solver"];
@@ -118,12 +105,7 @@ export default function Home() {
                  </a>
                ))}
             </div>
-            <motion.div 
-              initial={{ height: 0 }}
-              animate={{ height: 40 }}
-              transition={{ delay: 1, duration: 1 }}
-              className="w-px bg-gradient-to-b from-white/20 to-transparent"
-            />
+            <HeroScrollLine />
           </Reveal>
         </section>
 
