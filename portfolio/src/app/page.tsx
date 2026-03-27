@@ -137,13 +137,9 @@ export default function Home() {
                 </Reveal>
                 <Reveal delay={0.2}>
                   <p className="text-white/55 text-lg leading-[1.85] max-w-xl font-light">
-                    B.Tech Computer Science undergraduate at Lovely Professional University
-                    with a CGPA of <span className="text-white">7.8</span>. I build full-stack MERN applications that are 
-                    fast, scalable, and built to last.
+                    I am <span className="text-white">Harsh Kumar Singh</span>, a B.Tech Computer Science student at <span className="text-white">Lovely Professional University</span> with a CGPA of <span className="text-white">7.8</span>. As an alumnus of <span className="text-white font-medium">Army Public School, Jalandhar Cantt</span>, I bring a disciplined and goal-driven approach to software engineering.
                     <br /><br />
-                    Before I wrote code, I wore a uniform — 3 years in the NCC Army Wing, 
-                    holding B & C Certificates. That discipline lives in every architecture 
-                    decision I make.
+                    As a focus-driven <span className="text-white">Full Stack Developer</span> (MERN), I specialize in building high-end, cinematic web experiences using <span className="text-white">Next.js (App Router)</span>, Framer Motion, and complex API integrations. My work is defined by clean architecture, structured logic, and a "problem-solver" mindset that thrives on turning complex challenges into scalable solutions.
                   </p>
                 </Reveal>
                 <div className="mt-12 flex gap-6 flex-wrap border-b border-white/5 pb-12">
@@ -365,6 +361,7 @@ export default function Home() {
                </div>
             </div>
           </section>
+
 
           {/* SECTION 08: ACTIVITIES (NCC) */}
           <section id="activities" className="py-24 md:py-32 w-full border-t border-white/[0.05] relative overflow-hidden">

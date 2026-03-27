@@ -38,23 +38,25 @@ const ProjectCardItem = ({
         transformStyle: "preserve-3d"
       }}
     >
-      {/* Featured Badge */}
-      {project.isFeatured && (
-        <div className="absolute top-6 right-6 z-20">
-          <span className="bg-[#10b981] text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest shadow-lg shadow-emerald-500/20">
-            Featured
-          </span>
-        </div>
-      )}
-
       {/* Project Image */}
-      <div className="relative w-full aspect-[16/7] overflow-hidden">
-        <img 
-          src={project.image} 
-          alt={project.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+      <div className="relative w-full aspect-[16/7] overflow-hidden bg-[#0a0a0c]">
+        {/* Color Fallback Layer */}
+        <div 
+          className="absolute inset-0 opacity-20"
+          style={{ backgroundColor: project.color }}
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent" />
+        
+        {/* SVG/Image Layer */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-700 group-hover:scale-105"
+          style={{ 
+            backgroundImage: `url(${project.image})`,
+          }}
+        />
+
+        {/* Cinematic Gradient Overlays */}
+        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-[#0a0a0c]/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0c] via-transparent to-transparent opacity-60" />
       </div>
 
       {/* Content */}
