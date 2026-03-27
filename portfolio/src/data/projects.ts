@@ -21,66 +21,66 @@ export const PROJECTS: ProjectCard[] = [
     description: "A precision-engineered predictive engine that quantifies project timelines and costs using scikit-learn models, delivered through a high-performance MERN architecture.",
     image: "https://images.unsplash.com/photo-1551288049-bbda38a883a2?auto=format&fit=crop&q=80&w=1000",
     color: "rgba(59, 130, 246, 0.8)",
-    tags: ["React", "Node.js", "Python", "Scikit", "MongoDB"],
+    tags: ["React", "Node.js", "Express", "MongoDB", "Python", "Scikit-learn"],
     features: [
-      "AI-driven cost estimation logic",
-      "Interactive data visualizations with D3",
-      "Enterprise-grade MERN architecture"
+      "ML-based cost/timeline prediction",
+      "Python ML service integration",
+      "Secure auth & user history"
     ],
     isFeatured: true,
     badge: "AI Prediction",
-    githubUrl: "#",
-    liveUrl: "#"
+    githubUrl: "https://github.com/HarshKumarhk07/project_cost_and_timeline_predictor",
+    liveUrl: "https://project-cost-and-timeline-predictor.vercel.app/"
   },
   {
     id: 2,
-    title: "Nexus Collab",
-    subtitle: "Real-time Spatial Workspace",
-    description: "Redefining digital collaboration with ultra-low latency WebSocket synchronization and Redis-backed state management for high-concurrency environments.",
-    image: "https://images.unsplash.com/photo-1522071823991-b1ae5e6a30c8?auto=format&fit=crop&q=80&w=1000",
+    title: "File Management System",
+    subtitle: "PHP + MySQL Full Stack",
+    description: "Authored a web-based File Management System to handle 100+ file uploads, previews, deletions, and recovery in a single interface.",
+    image: "https://images.unsplash.com/photo-1544396821-4dd40b938ad3?q=80&w=1470&auto=format&fit=crop",
     color: "rgba(168, 85, 247, 0.8)",
-    tags: ["Socket.io", "Redis", "Next.js", "TypeScript"],
+    tags: ["HTML", "CSS", "JavaScript", "PHP", "MySQL", "Tailwind CSS"],
     features: [
-      "Ultra-low latency syncing",
-      "Redis-powered session handling",
-      "Collaborative whiteboard canvas"
+      "Database-backed storage",
+      "Rigorous server-side validation",
+      "Resilient dark mode UI"
     ],
-    badge: "Real-time",
-    githubUrl: "#",
+    badge: "Full Stack",
+    githubUrl: "https://github.com/HarshKumarhk07/File-Management-System",
     liveUrl: "#"
   },
   {
     id: 3,
-    title: "Insight Engine",
-    subtitle: "Data Visualization Platform",
-    description: "Deep-dive analytics dashboard utilizing D3.js for complex spatial data mapping, powered by machine learning pipelines for predictive trend analysis.",
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1426&auto=format&fit=crop",
+    title: "Route Planning System",
+    subtitle: "Logistics Optimization",
+    description: "Prepared a Last Mile Route Planning System to optimize delivery routes for local distribution centres with interactive map visualizations.",
+    image: "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?q=80&w=1406&auto=format&fit=crop",
     color: "rgba(34, 197, 94, 0.8)",
-    tags: ["D3.js", "React", "PostgreSQL", "FastAPI"],
+    tags: ["PHP", "JavaScript", "Tailwind CSS", "HTML", "SQL"],
     features: [
-      "Complex spatial data mapping",
-      "Predictive trend forecasting",
-      "Real-time analytics stream"
+      "Route optimization logic",
+      "Interactive map visualization",
+      "Real-time delivery paths"
     ],
-    badge: "Big Data",
-    githubUrl: "#",
+    badge: "Logistics",
+    githubUrl: "https://github.com/HarshKumarhk07/Last-Mile-Route-planning-",
     liveUrl: "#"
   },
   {
     id: 4,
-    title: "Aura Design System",
-    subtitle: "Component Infrastructure",
-    description: "A state-of-the-art design tokens and component library focused on high-polish micro-interactions and performance-first CSS architecture.",
-    image: "https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=1364&auto=format&fit=crop",
+    title: "Bank Management System",
+    subtitle: "Java OOP & DSA",
+    description: "A Java-based Bank Management System built using OOP and DSA concepts to handle customers, accounts, and transactions efficiently with O(1) search.",
+    image: "https://images.unsplash.com/photo-1550565118-3d143c4a3023?q=80&w=1470&auto=format&fit=crop",
     color: "rgba(249, 115, 22, 0.8)",
-    tags: ["Storybook", "Framer", "Tailwind", "CSS"],
+    tags: ["Java", "OOP", "DSA", "HashMap", "Stack"],
     features: [
-      "Atomic design principles",
-      "Dynamic theming engine",
-      "Accessibility-first components"
+      "Auto-generated account numbers",
+      "O(1) search with HashMap",
+      "Transaction history with Stack"
     ],
-    badge: "Design Ops",
-    githubUrl: "#",
+    badge: "Java Core",
+    githubUrl: "https://github.com/HarshKumarhk07/Bank-Managment-System",
     liveUrl: "#"
   }
 ];
